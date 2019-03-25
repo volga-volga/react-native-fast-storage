@@ -26,7 +26,7 @@ RCT_EXPORT_METHOD(setItem:(NSString*)key
             @catch (NSException *exception) {
                 reject(@"cannot_set", @"Cannot set item", nil);
             }
-       
+
         });
     });
 }
@@ -45,7 +45,7 @@ RCT_EXPORT_METHOD(getItem:(NSString*)key
             @catch (NSException *exception) {
                 reject(@"cannot_get", exception.reason, nil);
             }
-            
+
         });
     });
 }
@@ -65,14 +65,13 @@ RCT_EXPORT_METHOD(removeItem:(NSString*)key
             @catch (NSException *exception) {
                 reject(@"cannot_get", exception.reason, nil);
             }
-            
+
         });
     });
 }
 
 #pragma mark clearStore
-RCT_EXPORT_METHOD(clearStore:(NSString*)key
-                  resolve:(RCTPromiseResolveBlock)resolve
+RCT_EXPORT_METHOD(resolve:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject
                   ) {
     dispatch_async(dispatch_queue_create("FastStorage.clearStore", 0), ^{
@@ -85,11 +84,10 @@ RCT_EXPORT_METHOD(clearStore:(NSString*)key
             @catch (NSException *exception) {
                 reject(@"cannot_get", exception.reason, nil);
             }
-            
+
         });
     });
 }
 
-
 @end
-  
+

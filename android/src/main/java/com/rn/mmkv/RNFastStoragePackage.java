@@ -1,5 +1,4 @@
-
-package com.reactlibrary;
+package com.rn.mmkv;
 
 import java.util.Arrays;
 import java.util.Collections;
